@@ -1,12 +1,18 @@
 """
 AI Cost Optimizer Example
-Using Synstar to reduce LLM API costs
+
+A minimal example demonstrating how a developer might
+experiment with LLM usage in a simple application.
 """
 
 from synstar import chat
 
-response = chat(
-    "Explain what artificial intelligence is in simple terms."
-)
+prompt = "Explain artificial intelligence in simple terms."
 
+response = chat(prompt)
+
+print("Prompt:")
+print(prompt)
+
+print("\nResponse:")
 print(response)

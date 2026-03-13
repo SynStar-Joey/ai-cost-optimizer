@@ -1,18 +1,10 @@
-"""
-AI Cost Optimizer Example
-
-A minimal example demonstrating how a developer might
-experiment with LLM usage in a simple application.
-"""
-
+# example.py
 from synstar import chat
 
+# Auto-select the cheapest model that can handle your task
 prompt = "Explain artificial intelligence in simple terms."
+response = chat(prompt, optimize_for="cost")  # or "performance"
 
-response = chat(prompt)
-
-print("Prompt:")
-print(prompt)
-
-print("\nResponse:")
-print(response)
+print(f"Model used: {response.model}")
+print(f"Estimated cost: ${response.estimated_cost:.4f}")
+print(response.content)
